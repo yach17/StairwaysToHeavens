@@ -7,6 +7,7 @@
     <groupId>fr.yach17</groupId>
     <artifactId>stairways-to-heavens</artifactId>
     <version>0.1-SNAPSHOT</version>
+    <description>Stairways to heavens</description>
 
     <properties>
         <cucumber.version>1.1.7</cucumber.version>
@@ -15,18 +16,62 @@
         <weld.version>2.2.2.Final</weld.version>
         <cdi.api.version>1.2</cdi.api.version>
     </properties>
-    <dependencyManagement>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>info.cukes</groupId>
+                <artifactId>cucumber-weld</artifactId>
+                <version>${cucumber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.cukes</groupId>
+                <artifactId>cucumber-junit</artifactId>
+                <version>${cucumber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>${assertj.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.weld.se</groupId>
+                <artifactId>weld-se</artifactId>
+                <version>${weld.version}</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-
+    <dependency>
+        <groupId>info.cukes</groupId>
+        <artifactId>cucumber-weld</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>info.cukes</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.jboss.weld.se</groupId>
+        <artifactId>weld-se</artifactId>
+    </dependency>
     </dependencies>
 </project>
